@@ -2,17 +2,14 @@
 COLORS
 
 TEXT #414143
-Dark Blue #2D3A4A
-Light blue #324154
-Dark Orange #F8941A
-Pale Orange #F4C38B
+Careers Green #7cb342;
 
 */
 
 
 
 * {
-  font-family: 'Roboto', sans-serif; /* delete for later */
+  font-family:  sans-serif; /* delete for later */
 }
 
 #cmf-wrap {
@@ -31,7 +28,7 @@ Pale Orange #F4C38B
 }
 
 .col-header {
-  border-bottom: 1px solid #F8941A;
+  border-bottom: 1px solid #7cb342;
   padding: 0px 0px 10px;
   width: 90%;
   margin: 0px auto;
@@ -50,12 +47,12 @@ Pale Orange #F4C38B
 .track-box h3 {
   position: relative;
   top: 30%;
-  color: #324154;
+  color: #222;
 }
 
 
 .cmf-info-box {
-  border: 1px solid #324154;
+  border: 1px solid #8b8b8b;
   padding: 5px;
   font-size: 13px;
   margin-top: 3px;
@@ -64,13 +61,14 @@ Pale Orange #F4C38B
 }
 
 .cmf-info-box:hover {
-  background-color: #2D3A4A;
-  color: #F8941A;
+  background-color: #7cb342;
+  color: #FFF
 }
 
 .cmf-info-box-selected {
-  background-color: #2D3A4A;
-  color: #F8941A;
+
+	  background-color: #293917;
+  color: #FFF;
 }
 
 .role-col .cmf-info-box {
@@ -90,8 +88,8 @@ Pale Orange #F4C38B
 
 .vertical-centered-box {
   
-  transform: translateY(-95%);
-  -ms-transform: translateY(-95%);
+  transform: translateY(-43%);
+  -ms-transform: translateY(-43%);
 
 } 
 
