@@ -1,6 +1,6 @@
 (function ($) {
   
-  //declare JSON Object with EZ-SHARE IDSs
+  //declare JSON Object with IDB Doc ID numbers
   var pathLevelDocs = {
 		
     "technicalSupport" : {
