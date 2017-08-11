@@ -264,13 +264,13 @@
       docIDs.push(pathLevelDocs[path][prop]);
     }
 
-    var baseURL = "https://idbg.sharepoint.com/teams/IICCorporate/administrative management/_layouts/15/DocIdRedir.aspx?ID=";
+    var baseURL = "http://idbdocs.iadb.org/WSDocs/getDocument.aspx?DOCNUM=";
     
     
     //loop over visible buttons and set their href values
     $.each(level, function (index, value) {
        
-        level[index].href = baseURL + docIDs[index];
+        level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
 
     });
     
