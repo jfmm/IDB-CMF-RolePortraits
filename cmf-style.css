@@ -1,18 +1,20 @@
+/*
+ Delete import statement on production
+*/
+
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
-
-
-
-* {
-  font-family:  'Open sans', sans-serif; /* delete for later */
-}
+/*
+ --------------------------------------------------
+*/
 
 #cmf-wrap {
   text-align: center;
   color: #414143;
   width: 1170px;
   margin: 50px auto 0px;
+  font-family:  'Open sans', sans-serif;
 }
 
 #cmf-wrap h3 {
@@ -68,8 +70,10 @@
   border-top: 2px solid;
 }
 
-.role-col .level-btn:first-child div {
-  background: tomato !important;
+a.level-btn:first-child div  {
+  border-top: 2px solid;
+  color: blueviolet !important;
+  
 }
 
 
