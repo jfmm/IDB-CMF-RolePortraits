@@ -65,16 +65,13 @@
   border-bottom: 2px solid;
 }
 
-.career-path-col .cmf-info-box:first-child {
+.career-path-col .cmf-info-box:first-child,
+a.level-btn:first-of-type div {
 
   border-top: 2px solid;
 }
 
-a.level-btn:first-child div  {
-  border-top: 2px solid;
-  color: blueviolet !important;
-  
-}
+
 
 
 /* Support Track Styles */
@@ -113,7 +110,7 @@ a.level-btn:first-child div  {
 }
 
 .technical-row .cmf-info-box-selected {
-	 background-color: #519051;
+  background-color: #519051;
   color: #FFF;
 }
 
