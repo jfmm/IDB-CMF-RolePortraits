@@ -152,10 +152,12 @@ a.level-btn:first-of-type div
 
 .cmf-col-hidden {
   opacity: 0;
+ 
 }
 
 .cmf-col-visible {
   opacity: 1;
+ 
 }
 
 

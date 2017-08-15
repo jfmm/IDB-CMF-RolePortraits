@@ -216,13 +216,16 @@
   
   button.on("click", function () {
     
-    var thisButton = $(this);// get button instance clicked
-   
+    var thisButton = $(this), // get button instance clicked
+        path = thisButton.data("path"); // get the career path value  of the button selected
+    
+  
     
     /*
     * GUI Logic
     *
     */ 
+    
     if (thisButton.data("type") === "path") {
       
       // if there's a button already selected, deselect it
@@ -232,8 +235,26 @@
       //then add selected class to button that was clicked
       thisButton.addClass("cmf-info-box-selected");
       
-      //show sibling columns
-      thisButton.parent().siblings().removeClass("cmf-col-hidden").addClass("cmf-col-visible");
+      // if we're dealing with the Country Rep scenario...
+      if(path === "countryLeader") {
+     
+        
+        // show the country rep column
+        $("#repBox").removeClass("cmf-col-hidden").addClass("cmf-col-visible");
+        
+      }
+      
+      else { 
+        //show role column
+        $("#repBox").removeClass("cmf-col-visible")
+                    .addClass("cmf-col-hidden");
+        
+        thisButton.parent()
+                  .siblings()
+                  .removeClass("cmf-col-hidden")
+                  .addClass("cmf-col-visible");
+      }
+      
       
       //hide the other work roles/grade levels
       thisButton.parent()
@@ -250,8 +271,6 @@
     /*
     *  Link Logic
     */
-    
-    var path = thisButton.data("path");
     
     //select only the level buttons that are visible
     var level = $("div.cmf-col-visible .level-btn");
