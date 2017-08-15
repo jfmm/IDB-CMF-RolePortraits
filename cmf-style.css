@@ -44,7 +44,7 @@
 }
 
 .track-box {
-  height: 60px;
+  height: 155px;
 }
 
 .track-box h3 {
@@ -66,7 +66,8 @@
 }
 
 .career-path-col .cmf-info-box:first-child,
-a.level-btn:first-of-type div {
+a.level-btn:first-of-type div 
+{
 
   border-top: 2px solid;
 }
@@ -162,16 +163,16 @@ a.level-btn:first-of-type div {
 ---------------------*/
 .line-1 {
   height: 2px;
-  border-top: 1px solid #519051;
-  width: 166px;
-  transform: translateX(-18%) translateY(-56px) rotate(45deg);
+  border-top: 2px solid #519051;
+  width: 133px;
+  transform: translateX(-15%) translateY(-36px) rotate(37deg);
   -ms-transform: translateX(-18%) translateY(-56px) rotate(45deg);
 }
 
 .line-2 {
    height: 2px;
-  border-top: 1px solid #519051;
-  width: 166px;
+  border-top: 2px solid #519051;
+  width: 175px;
   transform: translateX(-18%) translateY(60px) rotate(-45deg);
   -ms-transform: translateX(-18%) translateY(60px) rotate(-45deg);
 }
@@ -179,38 +180,37 @@ a.level-btn:first-of-type div {
 
 .line-3 {
   height: 2px;
-  border-top: 1px solid rgb(250, 175, 59);
-  width: 57px;
-  transform: translateX(-98%) translateY(20px) rotate(-11deg);
-  -ms-transform:translateX(-98%) translateY(20px) rotate(-11deg);
+  border-top: 2px solid #005898;
+  width: 7px;
+  transform: translateX(-98%) translateY(11px) rotate(-11deg);
+  -ms-transform:translateX(-98%) translateY(11px) rotate(-11deg);
 }
 
 .line-4 {
   height: 2px;
-  border-top: 1px solid rgb(250, 175, 59);
-  width: 57px;
-  transform: translateX(-98%) translateY(-33px) rotate(11deg);
-  -ms-transform: translateX(-98%) translateY(-33px) rotate(11deg);
+  border-top: 2px solid #005898;
+  width: 34px;
+  transform: translateX(-94%) translateY(-33px) rotate(25deg);
 
 }
 
 
 .line-5 {
-  height: 2px;
-  border-top: 1px solid rgb(250, 175, 59);
-  width: 37px;
-  transform: translateX(-98%) translateY(8px) rotate(-10deg);
-  -ms-transform: translateX(-98%) translateY(8px) rotate(-10deg);
   
+  height: 2px;
+  border-top: 2px solid #dd7909;
+  width: 64px;
+  transform: translateX(-87%) translateY(32px) rotate(-37deg);
+  -ms-transform: translateX(-98%) translateY(8px) rotate(-10deg);
 }
 
 
 .line-6 {
-  height: 2px;
-  border-top: 1px solid rgb(250, 175, 59);
-  width: 37px;
-  transform: translateX(-98%) translateY(-20px) rotate(10deg);
-  -ms-transform: translateX(-98%) translateY(-20px) rotate(10deg);
+    height: 2px;
+    border-top: 2px solid #dd7909;
+    width: 88px;
+    transform: translateX(-88%) translateY(-43px) rotate(43deg);
+    -ms-transform: translateX(-98%) translateY(-20px) rotate(10deg);
 }
 
 
