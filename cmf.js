@@ -218,82 +218,68 @@
     
     var thisButton = $(this), // get button instance clicked
         path = thisButton.data("path"); // get the career path value  of the button selected
-    
+    	
   
     
-    /*
-    * GUI Logic
-    *
-    */
     
-    /*
-    * TODO: 
-     if rep is chosen, disabled the ones for manager
-     else if biz lead is chosen disable the other one.
-    */   
-    
-    if (thisButton.data("type") === "path") {
-      
-      // if there's a button already selected, deselect it
-      if(button.hasClass("cmf-info-box-selected")) 
+   // if there's a button already selected, deselect it  
+		if(button.hasClass("cmf-info-box-selected")) 
           button.removeClass("cmf-info-box-selected");
       
+		
       //then add selected class to button that was clicked
       thisButton.addClass("cmf-info-box-selected");
       
-      // if we're dealing with the Country Rep scenario...
-      if(path === "countryLeader") {
      
-        
-        // show the country rep column
-        $("#repBox").removeClass("cmf-col-hidden").addClass("cmf-col-visible");
-    
-        
-      }
-      
-      else if (path === "businessLeader") {
-     
-        $("#managerBox").removeClass("cmf-col-hidden").addClass("cmf-col-visible");
-      }
-      
-      else { 
-        //show role column
-        $("#repBox").removeClass("cmf-col-visible")
-                    .addClass("cmf-col-hidden");
-        
-        thisButton.parent()
-                  .siblings()
-                  .removeClass("cmf-col-hidden")
-                  .addClass("cmf-col-visible");
-      }
+      //show Work role column
+      thisButton.parent()
+								.siblings()
+								.removeClass("cmf-col-hidden")
+								.addClass("cmf-col-visible");
       
       
-      //hide the other work roles/grade levels
+      //hide the irrelevant Work role columns
       thisButton.parent()
                 .parent()
                 .siblings()
                 .children(".role-col") // only children with this class
                 .removeClass("cmf-col-visible")
                 .addClass("cmf-col-hidden");
-    }
+   
     
     
+    //select work role links currently visible
+   	var level = $("div.cmf-col-visible .level-btn");
+		
+		
+		//conditional logic for Mangerial track
+		if(path === "countryLeader" || path === "businessLeader") {
+			
+			for(var i = 0; i < level.length; i++) {
+				
+				var currentBtn = level[i];
+				
+				// disable/enable buttons according to path
+				if(currentBtn.dataset.for !== path)
+					$(currentBtn).addClass("level-btn-disabled");
+				
+				else
+					$(currentBtn).removeClass("level-btn-disabled");
+			}
+		} 
+
     
-    
-    /*
+   
+		/*
     *  Link Logic
     */
     
-    //select only the level buttons that are visible
-    var level = $("div.cmf-col-visible .level-btn");
-    
-   
-    
-    var docIDs = []; // stores EZSHARE ids for path clicked
+    var docIDs = []; // stores IDB Doc ids for path clicked
     
     for(prop in pathLevelDocs[path]) {
       docIDs.push(pathLevelDocs[path][prop]);
     }
+		
 
     var baseURL = "http://idbdocs.iadb.org/WSDocs/getDocument.aspx?DOCNUM=";
     
@@ -302,9 +288,20 @@
     $.each(level, function (index, value) {
       
         // do not append a URL to boxes that are disabled...
-        //if(level[index] has class disabled then continue the loop);
-       
-        level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
+        if($(level[index]).hasClass("level-btn-disabled")) {
+				
+					level[index].href = "#";
+					
+				} 
+				else if(path === "countryLeader") {
+					// for country rep, we just hardcode the index for now...
+					level[index].href = baseURL + docIDs[0] + "&CONTDISP=inline";
+				}
+				
+				else {
+				
+       		level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
+				}
 
     });
     
