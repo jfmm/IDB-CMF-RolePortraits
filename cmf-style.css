@@ -75,6 +75,9 @@ a.level-btn:first-of-type div
 
 
 
+
+
+
 /* Support Track Styles */
 
 .support-row .cmf-info-box {
@@ -216,3 +219,19 @@ a.level-btn:first-of-type div
 }
 
 
+
+
+
+
+
+/* disabled styles*/
+
+.level-btn-disabled div {
+  color: #f5f5f5 !important;
+  border-color: #f5f5f5 !important;
+  cursor: not-allowed;
+}
+
+.level-btn-disabled div:hover {
+  background-color: white !important;
+}

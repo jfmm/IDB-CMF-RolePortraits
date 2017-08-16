@@ -224,7 +224,13 @@
     /*
     * GUI Logic
     *
-    */ 
+    */
+    
+    /*
+    * TODO: 
+     if rep is chosen, disabled the ones for manager
+     else if biz lead is chosen disable the other one.
+    */   
     
     if (thisButton.data("type") === "path") {
       
@@ -241,7 +247,13 @@
         
         // show the country rep column
         $("#repBox").removeClass("cmf-col-hidden").addClass("cmf-col-visible");
+    
         
+      }
+      
+      else if (path === "businessLeader") {
+     
+        $("#managerBox").removeClass("cmf-col-hidden").addClass("cmf-col-visible");
       }
       
       else { 
@@ -288,6 +300,9 @@
     
     //loop over visible buttons and set their href values
     $.each(level, function (index, value) {
+      
+        // do not append a URL to boxes that are disabled...
+        //if(level[index] has class disabled then continue the loop);
        
         level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
 
