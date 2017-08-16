@@ -260,11 +260,12 @@
 			var currentBtn = level[i];
 
 			// disable/enable buttons according to path
-			if(currentBtn.dataset.for !== path)
-				$(currentBtn).addClass("level-btn-disabled");
-
-			else
-				$(currentBtn).removeClass("level-btn-disabled");
+			if(currentBtn.dataset.for !== path) 
+				$(currentBtn).addClass("level-btn-disabled").removeAttr("target");
+	
+			 else 
+				$(currentBtn).removeClass("level-btn-disabled").attr("target", "_blank");
+			
 		}
 	} 
 
