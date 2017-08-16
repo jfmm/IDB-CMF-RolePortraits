@@ -233,9 +233,9 @@
      
       //show Work role column
       thisButton.parent()
-		.siblings()
-		.removeClass("cmf-col-hidden")
-		.addClass("cmf-col-visible");
+								.siblings()
+								.removeClass("cmf-col-hidden")
+								.addClass("cmf-col-visible");
       
       
       //hide the irrelevant Work role columns
@@ -300,7 +300,7 @@
 
 	else {
 
-level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
+		level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
 	}
 
     });
