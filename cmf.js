@@ -233,9 +233,9 @@
      
       //show Work role column
       thisButton.parent()
-								.siblings()
-								.removeClass("cmf-col-hidden")
-								.addClass("cmf-col-visible");
+		.siblings()
+		.removeClass("cmf-col-hidden")
+		.addClass("cmf-col-visible");
       
       
       //hide the irrelevant Work role columns
@@ -252,21 +252,21 @@
    	var level = $("div.cmf-col-visible .level-btn");
 		
 		
-		//conditional logic for Mangerial track
-		if(path === "countryLeader" || path === "businessLeader") {
-			
-			for(var i = 0; i < level.length; i++) {
-				
-				var currentBtn = level[i];
-				
-				// disable/enable buttons according to path
-				if(currentBtn.dataset.for !== path)
-					$(currentBtn).addClass("level-btn-disabled");
-				
-				else
-					$(currentBtn).removeClass("level-btn-disabled");
-			}
-		} 
+	//conditional logic for Mangerial track
+	if(path === "countryLeader" || path === "businessLeader") {
+
+		for(var i = 0; i < level.length; i++) {
+
+			var currentBtn = level[i];
+
+			// disable/enable buttons according to path
+			if(currentBtn.dataset.for !== path)
+				$(currentBtn).addClass("level-btn-disabled");
+
+			else
+				$(currentBtn).removeClass("level-btn-disabled");
+		}
+	} 
 
     
    
@@ -289,19 +289,19 @@
       
         // do not append a URL to boxes that are disabled...
         if($(level[index]).hasClass("level-btn-disabled")) {
-				
-					level[index].href = "#";
-					
-				} 
-				else if(path === "countryLeader") {
-					// for country rep, we just hardcode the index for now...
-					level[index].href = baseURL + docIDs[0] + "&CONTDISP=inline";
-				}
-				
-				else {
-				
-       		level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
-				}
+
+		level[index].href = "#";
+
+	} 
+	else if(path === "countryLeader") {
+		// for country rep, we just hardcode the index for now...
+		level[index].href = baseURL + docIDs[0] + "&CONTDISP=inline";
+	}
+
+	else {
+
+level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
+	}
 
     });
     
