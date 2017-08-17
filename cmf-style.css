@@ -74,6 +74,11 @@ a.level-btn:first-of-type div
 
 
 
+.bordered-top {
+	border-top: 2px solid !important;
+	/*utility class to force border top on special ocassions*/
+}
+
 
 
 
@@ -186,7 +191,7 @@ a.level-btn:first-of-type div
 .line-3 {
   height: 2px;
   border-top: 2px solid #0072c6;
-  width: 40px;
+  width: 48px;
   transform: translateX(-84%) translateY(25px) rotate(-39deg);
   -ms-transform:translateX(-84%) translateY(25px) rotate(-39deg);
 }
@@ -214,8 +219,8 @@ a.level-btn:first-of-type div
     height: 2px;
     border-top: 2px solid #dd7909;
     width: 88px;
-    transform: translateX(-88%) translateY(-43px) rotate(43deg);
-    -ms-transform: translateX(-88%) translateY(-43px) rotate(43deg);
+    transform: translateX(-86%) translateY(-47px) rotate(43deg);
+    -ms-transform: translateX(-86%) translateY(-47px) rotate(43deg);
 }
 
 
