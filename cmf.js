@@ -272,7 +272,7 @@
     
    
 		/*
-    *  Link Logic
+    *  Link Dynamic population Logic
     */
     
     var docIDs = []; // stores IDB Doc ids for path clicked
@@ -291,24 +291,22 @@
         // do not append a URL to boxes that are disabled...
         if($(level[index]).hasClass("level-btn-disabled")) {
 
-		level[index].href = "#";
+					level[index].href = "#";
 
-	} 
-	else if(path === "countryLeader") {
-		// for country rep, we just hardcode the index for now...
-		level[index].href = baseURL + docIDs[0] + "&CONTDISP=inline";
-	}
+				} 
+				else if(path === "countryLeader") {
+					
+					// for country rep, we just hardcode the index for now...
+					level[index].href = baseURL + docIDs[0] + "&CONTDISP=inline";
+				
+				}
 
-	else {
+				else {
 
-		level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
-	}
+					level[index].href = baseURL + docIDs[index] + "&CONTDISP=inline";
+				}
 
-    });
-    
-    
-    
-    
+					});
   });
   
 })(jQuery);
