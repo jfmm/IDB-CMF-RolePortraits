@@ -211,7 +211,7 @@ a.level-btn:first-of-type div
   border-top: 2px solid #dd7909;
   width: 64px;
   transform: translateX(-87%) translateY(32px) rotate(-37deg);
-  -ms-transform: translateX(-98%) translateY(8px) rotate(-10deg);
+  -ms-transform: translateX(-87%) translateY(32px) rotate(-37deg);
 }
 
 
