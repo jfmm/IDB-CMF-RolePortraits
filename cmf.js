@@ -219,8 +219,24 @@
     var thisButton = $(this), // get button instance clicked
         path = thisButton.data("path"); // get the career path value  of the button selected
     	
-  
-    
+		
+		// if the box had already been selected, hide the column
+    if(thisButton.hasClass("cmf-info-box-selected")) {
+		
+			 //hide its Work role column
+      thisButton.parent()
+								.siblings(":not(.track-box)") 
+								.removeClass("cmf-col-visible")
+								.addClass("cmf-col-hidden");
+		} else {
+			   //show Work role column
+      thisButton.parent()
+								.siblings()
+								.removeClass("cmf-col-hidden")
+								.addClass("cmf-col-visible");
+      
+		}
+			
     
    // if there's a button already selected, deselect it  
 		if(button.hasClass("cmf-info-box-selected")) 
@@ -230,13 +246,13 @@
       //then add selected class to button that was clicked
       thisButton.addClass("cmf-info-box-selected");
       
-     
-      //show Work role column
-      thisButton.parent()
-								.siblings()
-								.removeClass("cmf-col-hidden")
-								.addClass("cmf-col-visible");
-      
+		
+//      //show Work role column
+//      thisButton.parent()
+//								.siblings()
+//								.removeClass("cmf-col-hidden")
+//								.addClass("cmf-col-visible");
+//      
       
       //hide the irrelevant Work role columns
       thisButton.parent()

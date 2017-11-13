@@ -15,6 +15,7 @@
   width: 1170px;
   margin: 50px auto 0px;
   font-family:  'Open sans', sans-serif;
+	position: relative;
 }
 
 #cmf-wrap h3 {
@@ -63,6 +64,21 @@
   border-left: 2px solid;
   border-right: 2px solid;
   border-bottom: 2px solid;
+}
+
+
+.cmf-info-box[title]:hover:after {
+	content: attr(title);
+  padding: 4px 8px;
+	max-width: 300px;
+  color: #333;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .career-path-col .cmf-info-box:first-child,
