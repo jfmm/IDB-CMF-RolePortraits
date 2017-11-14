@@ -1,4 +1,8 @@
 (function ($) {
+	
+	// initialize Bootstrap tooltip plugin...
+	$('[data-toggle="tooltip"]').tooltip();
+	
   
   //declare JSON Object with IDB Doc ID numbers
   var pathLevelDocs = {
