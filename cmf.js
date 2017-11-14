@@ -226,21 +226,22 @@
 		// first hide the elements tooltip
 		thisButton.tooltip("hide");
 		
-		// if the box had already been selected, hide the column
+		// if the box had already been selected
     if(thisButton.hasClass("cmf-info-box-selected")) {
 		
-			 //hide its Work role column
+			//hide its Work role column
       thisButton.parent()
 								.siblings(":not(.track-box)") 
-								.removeClass("cmf-col-visible")
+								.removeClass("cmf-col-visible cmf-info-box-selected")
 								.addClass("cmf-col-hidden");
+								
 		} else {
+			
 			//show Work role column
       thisButton.parent()
 								.siblings()
 								.removeClass("cmf-col-hidden")
 								.addClass("cmf-col-visible");
-      
 		}
 			
     
@@ -249,16 +250,9 @@
           button.removeClass("cmf-info-box-selected");
       
 		
-      //then add selected class to button that was clicked
+    //then add selected class to button that was clicked
       thisButton.addClass("cmf-info-box-selected");
       
-		
-//      //show Work role column
-//      thisButton.parent()
-//								.siblings()
-//								.removeClass("cmf-col-hidden")
-//								.addClass("cmf-col-visible");
-//      
       
       //hide the irrelevant Work role columns
       thisButton.parent()
