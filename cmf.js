@@ -229,7 +229,7 @@
 								.removeClass("cmf-col-visible")
 								.addClass("cmf-col-hidden");
 		} else {
-			   //show Work role column
+			//show Work role column
       thisButton.parent()
 								.siblings()
 								.removeClass("cmf-col-hidden")
