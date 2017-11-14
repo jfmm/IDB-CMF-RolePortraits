@@ -222,7 +222,9 @@
     
     var thisButton = $(this), // get button instance clicked
         path = thisButton.data("path"); // get the career path value  of the button selected
-    	
+    
+		// first hide the elements tooltip
+		thisButton.tooltip("hide");
 		
 		// if the box had already been selected, hide the column
     if(thisButton.hasClass("cmf-info-box-selected")) {
