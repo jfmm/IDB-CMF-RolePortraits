@@ -276,7 +276,7 @@
 			var currentBtn = level[i];
 
 			// disable/enable buttons according to path
-			if(currentBtn.dataset.for !== path) 
+			if(currentBtn.dataset.relatedpath !== path) 
 				$(currentBtn).addClass("level-btn-disabled").removeAttr("target");
 	
 			 else 
