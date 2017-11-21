@@ -273,14 +273,14 @@
 
 		for(var i = 0; i < level.length; i++) {
 
-			var currentBtn = level[i];
+			var $currentBtn = $(level[i]);//cache jquery obj reference
 
 			// disable/enable buttons according to path
-			if(currentBtn.dataset.relatedpath !== path) 
-				$(currentBtn).addClass("level-btn-disabled").removeAttr("target");
+			if($currentBtn.data("relatedpath") !== path) 
+				$currentBtn.addClass("level-btn-disabled").removeAttr("target");
 	
 			 else 
-				$(currentBtn).removeClass("level-btn-disabled").attr("target", "_blank");
+				$currentBtn.removeClass("level-btn-disabled").attr("target", "_blank");
 			
 		}
 	} 
