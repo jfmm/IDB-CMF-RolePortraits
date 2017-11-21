@@ -69,7 +69,7 @@
 
 /*
 
-Uncomment for tooltip effect....
+Uncomment for CSS tooltip effect....
 
 .cmf-info-box[title]:hover:after {
 	content: attr(title);
@@ -228,15 +228,15 @@ a.level-btn:first-of-type div
   height: 2px;
   border-top: 2px solid #dd7909;
   width: 64px;
-  transform: translateX(-87%) translateY(32px) rotate(-37deg);
+  transform: translateX(-87%) translateY(62px) rotate(-37deg);
 }
 
 
 .line-6 {
 	height: 2px;
 	border-top: 2px solid #dd7909;
-	width: 88px;
-	transform: translateX(-86%) translateY(-47px) rotate(43deg);
+	width: 38px;
+	transform: translateX(-86%) translateY(-30px) rotate(43deg);
 }
 
 
