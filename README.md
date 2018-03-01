@@ -49,6 +49,8 @@ So, in the javascript we have the following base URL:
 ```javascript
  var baseURL = "https://idbg.sharepoint.com/teams/ez-HRD/Outreach/_layouts/15/DocIdRedir.aspx?ID=";
 ```
+**WARNING:** if the documents that are relevant to this application where to be moved to another folder or to another system entirely, the application will become obsolete. Make sure the `baseURL` and document ID's in `var pathLevelDocs` are updated accordingly. 
+
 This variable is then used to set the `href` value of the boxes dynamically with the following code:
 
 ```javascript
