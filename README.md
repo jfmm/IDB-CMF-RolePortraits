@@ -58,22 +58,22 @@ This variable is then used to set the `href` value of the boxes dynamically with
         // do not append a URL to boxes that are disabled...
         if($(level[index]).hasClass("level-btn-disabled")) {
 
-					level[index].href = "#";
+		level[index].href = "#";
 
-				} 
-				else if(path === "countryLeader") {
+	} 
+	else if(path === "countryLeader") {
 					
-					// for country rep, we just hardcode the index for now...
-					level[index].href = baseURL + docIDs[0] + "&CONTDISP=inline";
+		// for country rep, we just hardcode the index for now...
+		level[index].href = baseURL + docIDs[0] + "&CONTDISP=inline";
 				
-				}
+	}
 
-				else {
+	else {
 
-					level[index].href = baseURL + docIDs[index];
-				}
+		level[index].href = baseURL + docIDs[index];
+	}
 
-					});
+		});
 });
 
 ```
